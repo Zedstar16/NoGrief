@@ -1,0 +1,19 @@
+name: NoGrief
+main: Zedstar16\NoGrief\NoGrief
+version: 0.1
+api: 3.0.0
+author: Zedstar16
+description: simple plugin to prevent accidental griefing
+website: https://github.com/zedstar16/nogrief
+
+commands:
+ nogrief:
+  description: "Toggle ability to break and place blocks"
+  usage: "/nogrief"
+  permission: nogrief
+
+permissions:
+ nogrief:
+  default: op
+  description: "toggle break place block perm"
+
