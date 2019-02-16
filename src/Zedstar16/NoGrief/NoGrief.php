@@ -7,6 +7,7 @@ namespace Zedstar16\NoGrief;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
@@ -66,3 +67,9 @@ class NoGrief extends PluginBase implements Listener {
         }
     }
 }
+
+    public function onQuit(PlayerQuitEvent $event){
+	    if(isset($this->nobreak[$pn])){
+                unset($this->nobreak[$pn]);
+	    }
+    }
