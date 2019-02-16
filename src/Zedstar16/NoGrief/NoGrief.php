@@ -66,10 +66,11 @@ class NoGrief extends PluginBase implements Listener {
             $event->setCancelled();
         }
     }
-}
+
 
     public function onQuit(PlayerQuitEvent $event){
 	    if(isset($this->nobreak[$pn])){
                 unset($this->nobreak[$pn]);
 	    }
     }
+}
