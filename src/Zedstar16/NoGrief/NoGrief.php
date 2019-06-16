@@ -69,6 +69,7 @@ class NoGrief extends PluginBase implements Listener {
 
 
     public function onQuit(PlayerQuitEvent $event){
+	   $pn = $event->getPlayer()->getName();    
 	    if(isset($this->nobreak[$pn])){
                 unset($this->nobreak[$pn]);
 	    }
